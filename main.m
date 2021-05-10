@@ -28,9 +28,30 @@ end
 
 
 
- h = histogram(v);
+ h1 = histogram(v);
+ % 55 images
+ x=[1:1:55];
+ % transform the images' variance vector into normal distribution 
+ y = gaussmf(x,[std(v) mean(v)]);
+ % 
+ y1 = 44 * y;
  
+ subplot(2,2,1);
+ histogram(v);
+ title('original data');
+ xlabel('max-variance') ;
+ylabel('nums of image') ;
+
+ 
+ subplot(2,2,2);
+ plot(x,y1);
+ title('transformed data');
+ xlabel('max-variance') ;
+ylabel('nums of image') ;
+ 
+ subplot(2,2,3);
  autocorr(v);
+ title('autocorrelation plot of data');
  figure
 
 %calculate the mean
