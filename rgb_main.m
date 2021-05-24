@@ -127,19 +127,23 @@ end
 X_double_bar = mean(X_bar_set);
 [m,n] = size(X_bar_set);
 
-% for i = 1:3
-%     for j = 1:3
-%         if i==j
-%             covariance(i,j) = var(X_bar_set(:,i));
-%         else
-%             num = 0.0;
-%             for k = 1: m
+for i = 1:3
+    for j = 1:3
+        num = 0.0;
+        if i==j
+            covariance1(i,j) = var(X_bar_set(:,i));
+        else
+            
+            for k = 1: m
+                a = X_bar_set(k,i) - X_double_bar(i);
+                b = X_bar_set(k,j) - X_double_bar(j);
 %                 num = num + ((X_bar_set(m,i) - X_double_bar(i)) * (X_bar_set(m,j) - X_double_bar(j)));
-%             end
-%             covariance(i,j) = 1 / (num-1);
-%         end
-%     end
-% end
+                num = num + a*b;
+            end
+            covariance1(i,j) =  num/40;
+        end
+    end
+end
 covariance = cov(X_bar_set);
 % for i = 1:3
 %     for j = 1:3
