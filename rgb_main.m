@@ -101,13 +101,13 @@ X_bar_set = [];
 cov_set = [];
 
 % calculate every normal image's covariance matrix and mean vector    
-for i=1:13
+for i=1:15
     [r,g,b]=haar2_wavelet(sprintf('g%d.png',i));
     X_bar_set = [X_bar_set;r,g,b];
     
 end
 
-for i=1:24
+for i=1:85
     if i<10
         [r,g,b]=haar2_wavelet(sprintf('image_part_00%d.jpg',i));
     else
@@ -117,13 +117,13 @@ for i=1:24
 
 end
 
-for i=37:40
-    
-    [X_bar]=haar2_wavelet(sprintf('image_part_0%d.jpg',i));
-    
-    X_bar_set = [X_bar_set;r,g,b];
-
-end
+% for i=37:40
+%     
+%     [X_bar]=haar2_wavelet(sprintf('image_part_0%d.jpg',i));
+%     
+%     X_bar_set = [X_bar_set;r,g,b];
+% 
+% end
 X_double_bar = mean(X_bar_set);
 [m,n] = size(X_bar_set);
 
@@ -140,7 +140,7 @@ for i = 1:3
 %                 num = num + ((X_bar_set(m,i) - X_double_bar(i)) * (X_bar_set(m,j) - X_double_bar(j)));
                 num = num + a*b;
             end
-            covariance1(i,j) =  num/40;
+            covariance1(i,j) =  num/(m-1);
         end
     end
 end
@@ -173,21 +173,21 @@ covariance = cov(X_bar_set);
 % 
 
 % comparative test(normal image) 
-test_result = [];
-for i=41:54
-    [r,g,b]=haar2_wavelet(sprintf('image_part_0%d.jpg',i));
-    X_bar = [r,g,b];
-    T2 =  ([X_bar - X_double_bar] * inv(covariance) *[X_bar - X_double_bar].' );
-   test_result = [test_result,T2];
-end
-% comparative test(defect image) 
-defect_result = [];
-for i=1:5
-    [r,g,b]=haar2_wavelet(sprintf('b%d.png',i));
-    X_bar = [r,g,b];
-    T2 =  ([X_bar - X_double_bar] * inv(covariance) *[X_bar - X_double_bar].' );
-   defect_result = [defect_result,T2];
-end
+% test_result = [];
+% for i=41:54
+%     [r,g,b]=haar2_wavelet(sprintf('image_part_0%d.jpg',i));
+%     X_bar = [r,g,b];
+%     T2 =  ([X_bar - X_double_bar] * inv(covariance) *[X_bar - X_double_bar].' );
+%    test_result = [test_result,T2];
+% end
+% % comparative test(defect image) 
+% defect_result = [];
+% for i=1:5
+%     [r,g,b]=haar2_wavelet(sprintf('b%d.png',i));
+%     X_bar = [r,g,b];
+%     T2 =  ([X_bar - X_double_bar] * inv(covariance) *[X_bar - X_double_bar].' );
+%    defect_result = [defect_result,T2];
+% end
 
 
 
