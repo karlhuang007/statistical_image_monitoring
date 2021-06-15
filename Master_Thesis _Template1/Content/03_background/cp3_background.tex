@@ -1,0 +1,18 @@
+\chapter{Background}
+\label{cp:Background}
+
+Please write down the basic background for your research, e.g., the fundamental concepts of the approaches that you use in the thesis, so that other people (who do not have the background) can understand your work.
+
+Here is one example for sigmoid function:
+
+The sigmoid function is defined by formula~\ref{eq:sigmoid}. It can compress the input into the interval $(0, 1)$. The drawback of the sigmoid activation function is the so-called ``kill gradients'': if the input values locate in the tail of 0 or 1, the gradient at these regions tend to be zero. If the sigmoid function is used multiple times in a neural network, the gradients may be very small or even disappear.
+
+\begin{equation}
+\label{eq:sigmoid}
+\centering{f(x) = \frac{1}{1 + e^{-x}}}.
+\end{equation}
+
+
+
+
+

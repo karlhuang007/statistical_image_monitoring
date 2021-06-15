@@ -1,0 +1,20 @@
+\begin{thebibliography}{}
+
+\bibitem[Hijazi et~al., 2015]{hijazi2015using}
+Hijazi, S., Kumar, R., and Rowen, C. (2015).
+\newblock Using convolutional neural networks for image recognition.
+\newblock {\em Cadence Design Systems Inc.: San Jose, CA, USA}.
+
+\bibitem[LeCun et~al., 2015]{lecun2015deep}
+LeCun, Y., Bengio, Y., and Hinton, G. (2015).
+\newblock Deep learning.
+\newblock {\em nature}, 521(7553):436.
+
+\bibitem[Robicquet et~al., 2016]{robicquet2016learning}
+Robicquet, A., Sadeghian, A., Alahi, A., and Savarese, S. (2016).
+\newblock Learning social etiquette: Human trajectory understanding in crowded
+  scenes.
+\newblock In {\em European conference on computer vision}, pages 549--565.
+  Springer.
+
+\end{thebibliography}

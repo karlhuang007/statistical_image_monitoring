@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file is the Main-File of the TexReportsTemplate       %%
+%%               (c) by Tristan Wehrmaker                     %%
+%%              last modified:  09/03/2021 (Anna Malinovskaya)%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{scrreprt}
+
+%Pakete laden
+\input{Configuration/Packages.tex}
+
+%Variablen definieren
+\input{Configuration/Variables.tex}
+
+%Konfiguration laden
+\input{Configuration/Config.tex}
+
+%Befehle zur Verfügung stellen
+\input{Configuration/Commands.tex}
+
+%Titelseite definieren
+\input{Configuration/Title.tex}
+
+%Dokument beginnen
+\begin{document}
+
+%Kopf- und Fusszeilen definieren
+\clearscrheadfoot
+\ihead{\textbf{\headmark}\hfill }
+
+\setheadsepline{.9pt}   % Linie zwischen Kopf und Text
+%\setfootsepline{.9pt}   % Linie zwischen Text und Fuß
+
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\pagestyle{scrheadings}
+
+\cfoot{\textbf{\pagemark}}
+
+% \noindent
+% textwidth: \the\textwidth, \printlength{\textwidth}\\
+% evensidemargin: \the\evensidemargin, \printlength{\evensidemargin}\\ 
+% oddsidemargin: \the\oddsidemargin, \printlength{\oddsidemargin}\\
+% topmargin: \the\topmargin, \printlength{\topmargin}\\
+% headheight: \printlength{\headheight}\\
+% headsep: \printlength{\headsep}\\
+% textheight: \printlength{\textheight}\\
+% topskip: \printlength{\topskip}\\
+
+%15 cm textwidth, no margins set
+%textwidth: 426.79134pt, 14.99786 cm
+%evensidemargin: 17.3571pt, 0.60994 cm
+%oddsidemargin: 17.3571pt, 0.60994 cm
+%topmargin: -42.67912pt, -1.49979 cm
+
+% nothing set
+% textwidth: 418.25368pt, 14.69785 cm
+% evensidemargin: 17.3571pt, 0.60994 cm
+% oddsidemargin: 17.3571pt, 0.60994 cm
+% topmargin: -8.26335pt, -0.29037 cm
+% headheight: 0.5974 cm
+% headsep: 0.71687 cm
+% textheight: 20.78696 cm
+% topskip: 0.38655 cm
+
+
+
+
+%Titelseite erstellen
+\maketitle
+
+%master thesis protocol
+\input{Content/protocol.tex}
+
+%Erklärung hinzufügen
+\newpage
+\input{Content/Statement.tex}
+
+%acknowledgements
+\input{Content/Acknowledgment.tex}
+
+%Zusammenfassungen einfügen
+\input{Content/Abstract.tex}
+
+%Danksagung einfügen
+%\input{Content/Acknowledgment.tex}
+%Inhaltsverzeichnis erstellen
+\tableofcontents
+
+%Akronyme hinzufügen
+\input{Content/Acronyms.tex}
+
+%----------------------------- INHALT -----------------------------
+
+%Abbildungsverzeichnis hinzufügen
+\listoffigures
+
+\clearpage
+%Tabellenverzeichnis hinzufügen
+\begin{minipage}{\textwidth}
+\listoftables
+\end{minipage}
+
+%Kapitel hinzufügen
+\input{Content/Chapters.tex}
+
+%--------------------------- INHALT ENDE --------------------------
+
+%Bibliographie hinzufügen
+\bibliography{bibliography}
+\bibliographystyle{apalike}
+
+
+%Listingverzeichnis hinzufügen
+%\begin{minipage}{\textwidth}
+%\lstlistoflistings
+%\end{minipage}
+
+\end{document}
