@@ -7,24 +7,39 @@ gradually infer a high-level representation of the scratchs and stains from low-
 \section{Maximal variance of moving window}
 For the surface of back cover of handy, we assume that the the pixels of back cover are homogeneous. Therefore, we thought of using the variance of pixel value to extract some features to represent the surface state. \\
 
-The control charts are used spatially by moving a mask (or window) across the image and then calculating and plotting a statistic each time the mask is moved. The size of the mask depends on the expected size of the defects to be detected, with smaller defective regions requiring smaller mask sizes.~\cite{megahed2011review}
+The control charts are used spatially by moving a mask (or window) across the image and then calculating and plotting a statistic each time the mask is moved. The size of the mask depends on the expected size of the defects to be detected, with smaller defective regions requiring smaller mask sizes.~\cite{megahed2011review}Inspired by this view, we move a 10 by 10 window across the image and calculate the variance of the pixel value each time the window is moved. Then value with the largest variance in this image is taken as the desired statistic describing this image.
 
-Inspired by this view, we move a 10 x 10 window across the image and calculate the variance of the pixel value each time the window is moved. Then value with the largest variance in this image is taken as the desired statistic describing this image.
+\section{Discrete Wavelet transform decomposition}
+  The continuous wavelet transform was computed by changing the scale of the analysis window, shifting the window in time, multiplying by the signal, and integrating over all times. In the discrete case, filters of different cutoff frequencies are used to analyze the signal at different scales. The signal is passed through a series of high pass filters to analyze the high frequencies, and it is passed through a series of low pass filters to analyze the low frequencies.~\cite{polikarTHE WAVELET TUTORIALusing}\\
 
-\section{Wavelet transform decomposition}
-  The continuous wavelet transform was computed by changing the scale of the analysis window, shifting the window in time, multiplying by the signal, and integrating over all times. In the discrete case, filters of different cutoff frequencies are used to analyze the signal at different scales. The signal is passed through a series of high pass filters to analyze the high frequencies, and it is passed through a series of low pass filters to analyze the low frequencies.~\cite{polikarTHE WAVELET TUTORIALusing}
+The DWT [Fig.~\ref{fig:dwt}] analyzes the signal at different frequency bands with different resolutions by decomposing the signal into a coarse approximation and detail information, which are associated with low pass and highpass filters, respectively. In our case, we use Haar discrete wavelet transform as the basic function to perform signal decomposition, thus
+an original image is decomposed into four coefficients: one low-pass filtering coefficients (approximation coefficients, a) and three high-pass filtering coefficients (detail
+coefficients, containing the horizontal, vertical, and diagonal detail coefficients) at each level.
 
-
-
-Here is one example demonstrated by Fig.~\ref{fig:cnn} that adapted from~\cite{hijazi2015using}. 
+%Here is one example demonstrated by Fig.~\ref{fig:dwt} that adapted from~\cite{hijazi2015using}. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=1\textwidth]{images/cnn.pdf}
-\caption[Structure of CNNs]{A general structure of CNNs, which is frequently used for image recognition. There are several layers such as input layer, convolutional layer, non-linear layer, pooling layer, and fully-connected layer. The pink squares indicate
-the convolutional kernels. Figure is adapted from~\cite{hijazi2015using}.}
-\label{fig:cnn}
+\includegraphics[width=1\textwidth]{images/dwt.png}
+\caption[Structure of CNNs]{A general structure of CWT, the orange cube represent high-pass filter, the blue cube represent low-pass filter. Figure is adapted from MATLAB Tech Talks.}
+\label{fig:dwt}
 \end{figure}
+
+
+\section{Multivariate Control Chart}
+There are two distinct phases of control chart~\cite{bersimis2007multivariate}.
+
+\begin{itemize}
+	\item Phase I: charts are used for retrospectively testing whether the process was in control when the first
+subgroups were being drawn. In this phase, the charts are used as aids to the practitioner, in bringing a
+process into a state where it is statistically in control.
+	\item Phase II: control charts are used for testing whether the process remains in control when future subgroups
+are drawn. In this phase, the charts are used as aids to the practitioner in monitoring the process for any
+change from an in-control state.
+\end{itemize}
+
+Multivariate Control Chart can be ultilized to simultaneous monitor more than one quality characteristics. 
+
 
 
 

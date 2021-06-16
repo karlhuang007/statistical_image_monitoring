@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.12)  16 JUN 2021 12:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.12)  16 JUN 2021 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1233,23 +1233,26 @@ LaTeX Warning: Citation `megahed2011review' on page 13 undefined on input line
 
 
 LaTeX Warning: Citation `polikarTHE WAVELET TUTORIALusing' on page 13 undefined
- on input line 16.
+ on input line 13.
 
-<images/cnn.pdf, id=133, 844.15375pt x 598.235pt>
-File: images/cnn.pdf Graphic file (type pdf)
-<use images/cnn.pdf>
-Package pdftex.def Info: images/cnn.pdf  used on input line 24.
-(pdftex.def)             Requested size: 426.79134pt x 302.46686pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
-) (./Content/05_dataset/cp5_datasets.tex [13
+ []
 
-] [14 <./images/cnn.pdf
+<images/dwt.png, id=134, 548.0475pt x 275.52937pt>
+File: images/dwt.png Graphic file (type png)
+<use images/dwt.png>
+Package pdftex.def Info: images/dwt.png  used on input line 23.
+(pdftex.def)             Requested size: 426.79134pt x 214.57149pt.
+[13
 
-pdfTeX warning: pdflatex.exe (file ./images/cnn.pdf): PDF inclusion: invalid ot
-her resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
+]
+
+LaTeX Warning: Citation `bersimis2007multivariate' on page 14 undefined on inpu
+t line 30.
+
+) (./Content/05_dataset/cp5_datasets.tex [14 <./images/dwt.PNG>]
 chapter 5.
 ) (./Content/06_experiment/cp6_experiment.tex [15
 
@@ -1282,10 +1285,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18837 strings out of 480608
- 304189 string characters out of 5907535
- 743891 words of memory out of 5000000
- 34208 multiletter control sequences out of 15000+600000
+ 18840 strings out of 480608
+ 304207 string characters out of 5907535
+ 743884 words of memory out of 5000000
+ 34210 multiletter control sequences out of 15000+600000
  546479 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,11n,72p,10103b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1303,10 +1306,10 @@ ist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/texlive/2020/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmtt9.pfb><d:/texlive/2020/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1000.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
 er/sfrm1095.pfb>
-Output written on document.pdf (19 pages, 259297 bytes).
+Output written on document.pdf (19 pages, 263245 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 236 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
