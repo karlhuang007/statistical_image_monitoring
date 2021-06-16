@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.12)  6 JUN 2021 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.12.12)  16 JUN 2021 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,30 +1003,30 @@ Couldn't patch \deferred@thm@head!
 <images/leibniz.png, id=4, 301.125pt x 99.37125pt>
 File: images/leibniz.png Graphic file (type png)
 <use images/leibniz.png>
-Package pdftex.def Info: images/leibniz.png  used on input line 70.
+Package pdftex.def Info: images/leibniz.png  used on input line 71.
 (pdftex.def)             Requested size: 240.90031pt x 79.4971pt.
 <images/IKT.png, id=6, 160.80075pt x 48.78226pt>
 File: images/IKT.png Graphic file (type png)
 <use images/IKT.png>
-Package pdftex.def Info: images/IKT.png  used on input line 70.
+Package pdftex.def Info: images/IKT.png  used on input line 71.
 (pdftex.def)             Requested size: 128.64075pt x 39.02583pt.
 <images/IKG.png, id=7, 101.37875pt x 81.30376pt>
 File: images/IKG.png Graphic file (type png)
 <use images/IKG.png>
-Package pdftex.def Info: images/IKG.png  used on input line 70.
+Package pdftex.def Info: images/IKG.png  used on input line 71.
 (pdftex.def)             Requested size: 60.82771pt x 48.78261pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
 
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
 
 
 (d:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 70
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 71
 .
 
 (d:/texlive/2020/texmf-dist/tex/latex/wasysym/uwasy.fd
@@ -1183,7 +1183,7 @@ although it is yet undefined on input line 7.
 \openout8 = `document.lot'.
 
 
-Overfull \hbox (30.0pt too wide) in paragraph at lines 99--102
+Overfull \hbox (30.0pt too wide) in paragraph at lines 100--103
 []$[]$ 
  []
 
@@ -1222,117 +1222,91 @@ chapter 3.
 
 ]
 chapter 4.
-<images/cnn.pdf, id=135, 844.15375pt x 598.235pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+LaTeX Warning: Citation `megahed2011review' on page 13 undefined on input line 
+10.
+
+
+LaTeX Warning: Citation `polikarTHE WAVELET TUTORIALusing' on page 13 undefined
+ on input line 16.
+
+<images/cnn.pdf, id=133, 844.15375pt x 598.235pt>
 File: images/cnn.pdf Graphic file (type pdf)
 <use images/cnn.pdf>
-Package pdftex.def Info: images/cnn.pdf  used on input line 16.
+Package pdftex.def Info: images/cnn.pdf  used on input line 24.
 (pdftex.def)             Requested size: 426.79134pt x 302.46686pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./Content/05_dataset/cp5_datasets.tex [13
 
- <./images/cnn.pdf
+] [14 <./images/cnn.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/cnn.pdf): PDF inclusion: invalid ot
 her resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
 chapter 5.
-) (./Content/06_experiment/cp6_experiment.tex [14
+) (./Content/06_experiment/cp6_experiment.tex [15
 
 ]
 chapter 6.
-) (./Content/07_results_discussion/cp7_results_discussion.tex [15
+) (./Content/07_results_discussion/cp7_results_discussion.tex [16
 
 ]
 chapter 7.
-) (./Content/08_summary_outlook/cp8_summary_outlook.tex [16
+) (./Content/08_summary_outlook/cp8_summary_outlook.tex [17
 
 ]
 chapter 8.
-)) (./document.bbl [17
+)) (./document.bbl [18
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
- [18
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
+ [19
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
  (./document.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
 Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 18845 strings out of 480608
- 304258 string characters out of 5907535
- 742882 words of memory out of 5000000
- 34205 multiletter control sequences out of 15000+600000
+ 18837 strings out of 480608
+ 304189 string characters out of 5907535
+ 743891 words of memory out of 5000000
+ 34208 multiletter control sequences out of 15000+600000
  546479 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,11n,72p,10103b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{equation.14} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.18} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.16} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.9} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.12} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.24} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.23} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.22} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.21} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.17} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.15} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.13} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.10} has been referenced but does not exist,
- replaced by a fixed one
-
-{d:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<d:/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2020/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><d:/texlive/2020/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2020/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2020/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/texlive/2020/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt9.pfb><d:/texlive/2020/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm1000.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/cm-super
-/sfrm1095.pfb>
-Output written on document.pdf (18 pages, 257240 bytes).
+{d:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<d:/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><d:/texlive/2020/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2020/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r12.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2020/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb><d:/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt9.pfb><d:/texlive/2020/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1000.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1095.pfb>
+Output written on document.pdf (19 pages, 259297 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

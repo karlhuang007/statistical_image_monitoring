@@ -3,10 +3,11 @@
 \contentsline {chapter}{\numberline {2}Related Work}{11}{chapter.7}%
 \contentsline {chapter}{\numberline {3}Background}{12}{chapter.9}%
 \contentsline {chapter}{\numberline {4}Methodology}{13}{chapter.11}%
-\contentsline {section}{\numberline {4.1}Wavelet transform decomposition}{13}{section.12}%
-\contentsline {chapter}{\numberline {5}Dataset}{14}{chapter.14}%
-\contentsline {chapter}{\numberline {6}Experiments}{15}{chapter.16}%
-\contentsline {chapter}{\numberline {7}Results and Discussion}{16}{chapter.18}%
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{17}{chapter.19}%
-\contentsline {section}{\numberline {8.1}Summary}{17}{section.20}%
-\contentsline {section}{\numberline {8.2}Outlook}{17}{section.21}%
+\contentsline {section}{\numberline {4.1}Maximal variance of moving window}{13}{section.12}%
+\contentsline {section}{\numberline {4.2}Wavelet transform decomposition}{13}{section.13}%
+\contentsline {chapter}{\numberline {5}Dataset}{15}{chapter.15}%
+\contentsline {chapter}{\numberline {6}Experiments}{16}{chapter.17}%
+\contentsline {chapter}{\numberline {7}Results and Discussion}{17}{chapter.19}%
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{18}{chapter.20}%
+\contentsline {section}{\numberline {8.1}Summary}{18}{section.21}%
+\contentsline {section}{\numberline {8.2}Outlook}{18}{section.22}%
