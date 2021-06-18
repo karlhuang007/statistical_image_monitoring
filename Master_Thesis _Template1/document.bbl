@@ -1,14 +1,20 @@
 \begin{thebibliography}{}
 
-\bibitem[Hijazi et~al., 2015]{hijazi2015using}
-Hijazi, S., Kumar, R., and Rowen, C. (2015).
-\newblock Using convolutional neural networks for image recognition.
-\newblock {\em Cadence Design Systems Inc.: San Jose, CA, USA}.
+\bibitem[Bersimis et~al., 2007]{bersimis2007multivariate}
+Bersimis, S., Psarakis, S., and Panaretos, J. (2007).
+\newblock Multivariate statistical process control charts: an overview.
+\newblock {\em Quality and Reliability engineering international},
+  23(5):517--543.
 
 \bibitem[LeCun et~al., 2015]{lecun2015deep}
 LeCun, Y., Bengio, Y., and Hinton, G. (2015).
 \newblock Deep learning.
 \newblock {\em nature}, 521(7553):436.
+
+\bibitem[Megahed et~al., 2011]{megahed2011review}
+Megahed, F.~M., Woodall, W.~H., and Camelio, J.~A. (2011).
+\newblock A review and perspective on control charting with image data.
+\newblock {\em Journal of Quality Technology}, 43(2):83--98.
 
 \bibitem[Robicquet et~al., 2016]{robicquet2016learning}
 Robicquet, A., Sadeghian, A., Alahi, A., and Savarese, S. (2016).

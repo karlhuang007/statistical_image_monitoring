@@ -1,3 +1,51 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: document.aux
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: document.aux
 The style file: apalike.bst
+Illegal, another \bibdata command---line 121 of file document.aux
+ : \bibdata
+ :         {Content/0mycite}
+I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
+You've used 4 entries,
+            1935 wiz_defined-function locations,
+            504 strings with 4458 characters,
+and the built_in function-call counts, 1829 in all, are:
+= -- 181
+> -- 77
+< -- 1
++ -- 28
+- -- 26
+* -- 160
+:= -- 311
+add.period$ -- 13
+call.type$ -- 4
+change.case$ -- 33
+chr.to.int$ -- 4
+cite$ -- 4
+duplicate$ -- 69
+empty$ -- 127
+format.name$ -- 30
+if$ -- 361
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 30
+preamble$ -- 1
+purify$ -- 33
+quote$ -- 0
+skip$ -- 52
+stack$ -- 0
+substring$ -- 135
+swap$ -- 13
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 0
+while$ -- 16
+width$ -- 0
+write$ -- 55
+(There was 1 error message)
