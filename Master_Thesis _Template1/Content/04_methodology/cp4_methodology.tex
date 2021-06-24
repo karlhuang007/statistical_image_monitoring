@@ -16,7 +16,7 @@ Since our goal is to employ the control chart to monitor the image data, we used
 
 \section{Discrete Wavelet transform decomposition}
 
-The continuous wavelet transform was computed by changing the scale of the analysis window, shifting the window in time, multiplying by the signal, and integrating overall times. In the discrete case, filters of different cutoff frequencies are used to analyze the signal at different scales. The signal is passed through a series of high pass filters to analyze the high frequencies, and it is passed through a series of low pass filters to analyze the low frequencies.~\ref{polikar1996wavelet}
+The continuous wavelet transform was computed by changing the scale of the analysis window, shifting the window in time, multiplying by the signal, and integrating overall times. In the discrete case, filters of different cutoff frequencies are used to analyze the signal at different scales. The signal is passed through a series of high pass filters to analyze the high frequencies, and it is passed through a series of low pass filters to analyze the low frequencies~\cite{polikar1996wavelet}.
 
 
 %~\cite{polikarTHE WAVELET TUTORIALusing}
@@ -65,7 +65,7 @@ A RGB image has three frames: Red(R), Green(G), and Blue(B) frame. We apply haar
 % maybe I should try to get 9 elements to represent an image, that is more reasonable
 
 
-After we decompose an image of ($M \times N$) pixels, we get horizontal(h), vertical(v), and diagonal(d) coefficient matrix($S \times S$) for each frame at final level($L$), each coefficient matrix have $S^2$ coefficients,an image sample can have $3 \times S^2$ coefficients.~\ref{montgomery2020introduction} present tables indicating the recommended number of quality characteristics p = 2, 3, 4, 5, 10, and 20. It turns out that the coefficients of the diagonal coefficient matrix can best reflect the surface defects of various shapes(see experiment ~\ref{cp:experiment}). Thus we first absolute all coefficients, which turn negative coefficients into positive coefficients without changing the value itself. After that, we take the maximal coefficient among the diagonal matrix and consider it the desired statistical characteristic of the corresponding frame. Further, three coefficients retrieved from three frames compose the multiple wavelet characteristic vector $\mathbf{x}$. Finally, The Hotelling $T^{2}$ statistic
+After we decompose an image of ($M \times N$) pixels, we get horizontal(h), vertical(v), and diagonal(d) coefficient matrix($S \times S$) for each frame at final level($L$), each coefficient matrix have $S^2$ coefficients,an image sample can have $3 \times S^2$ coefficients.~\cite{montgomery2020introduction} present tables indicating the recommended number of quality characteristics p = 2, 3, 4, 5, 10, and 20. It turns out that the coefficients of the diagonal coefficient matrix can best reflect the surface defects of various shapes(see experiment ~\ref{cp:experiment}). Thus we first absolute all coefficients, which turn negative coefficients into positive coefficients without changing the value itself. After that, we take the maximal coefficient among the diagonal matrix and consider it the desired statistical characteristic of the corresponding frame. Further, three coefficients retrieved from three frames compose the multiple wavelet characteristic vector $\mathbf{x}$. Finally, The Hotelling $T^{2}$ statistic
 
 \begin{equation}
 \centering T^{2}=(\mathbf{x}-\overline{\mathbf{x}})^{\prime} \mathbf{S}^{-1}(\mathbf{x}-\overline{\mathbf{x}}) \label{equa:T2}
