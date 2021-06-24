@@ -1,23 +1,29 @@
 \chapter{Methodology}
 \label{cp:Methodology}
 
-  The proposed framework uses a bottom-up pipeline to
-gradually infer a high-level representation of the scratches and stains from low-level features in a back cover of mobile phone image. Firstly by mean of the wavelet transform, the surface texture properties such as scratch and stain are decomposed into so-called wavelet characteristics. Then multivariate statistical approach, i.e. Hotelling $T^{2}$ control chart is utilized to monitor the mean vector of a multivariate process, which can be used to judge the existence of scratch defects in the sample image.
+The proposed framework combines feature extract methods and statistical process control
+(SPC) monitoring techniques to
+gradually infer a high-level statistic value in the cover of mobile phone image from the low-level representation of the scratches and stains and monitor the image base on statistic value. Firstly, the surface texture properties such as scratch and stain are decomposed into so-called statistical characteristics by mean of the wavelet transform or moving window method. Then multivariate statistical approach, i.e., Hotelling $T^{2}$ control chart, is utilized to monitor the mean vector of a multivariate process, which can be used to judge the existence of scratch defects in the sample image.
 
 \section{Maximal variance of moving windows}
-For the surface of the back cover of handy, we assume that the pixels of the back cover are homogeneous. Therefore, we thought of using the variance of the pixel value to extract some features to represent the surface state. 
+We assume that the pixels on the surface of the handy's cover are homogeneous. Therefore, we thought of using the pixel value variance to extract features representing the surface state.
 
 
-The control charts are used spatially by moving a mask (or window) across the image and then calculating and plotting a statistic each time the mask is moved. The size of the mask depends on the expected size of the defects to be detected, with smaller defective regions requiring smaller mask sizes.~\cite{megahed2011review}Inspired by this view, we move a 10 by 10 window across the image and calculate the variance of the pixel value each time the window is moved. Then value with the largest variance in this image is taken as the desired statistic describing this image.
+
+The control charts are used spatially by moving a mask (or window) across the image and then calculating and plotting a statistic each time the mask is moved. The size of the mask depends on the expected size of the defects to be detected, with smaller defective regions requiring smaller mask sizes.~\cite{megahed2011review}Inspired by this view, we move a ten by ten window(The size of the window is obtained by hand-tuning) across the image and calculate the variance of the pixel value each time the window is moved. The value with the largest variance in this image is taken as the desired statistic describing this image.
+
+Since our goal is to employ the control chart to monitor the image data, we used $S$ standard sample images as Phase I data to retrieve the mean value($m$) and variance($ \sigma $) of the samples' statistic(maximal variance).In phase II, we will monitor whether the maximal variance of the incoming sample is within $m \pm \sigma$. If it is within this range, this sample will be considered qualified. Otherwise, it is unqualified.
 
 \section{Discrete Wavelet transform decomposition}
-  The continuous wavelet transform was computed by changing the scale of the analysis window, shifting the window in time, multiplying by the signal, and integrating over all times. In the discrete case, filters of different cutoff frequencies are used to analyze the signal at different scales. The signal is passed through a series of high pass filters to analyze the high frequencies, and it is passed through a series of low pass filters to analyze the low frequencies.
+
+The continuous wavelet transform was computed by changing the scale of the analysis window, shifting the window in time, multiplying by the signal, and integrating overall times. In the discrete case, filters of different cutoff frequencies are used to analyze the signal at different scales. The signal is passed through a series of high pass filters to analyze the high frequencies, and it is passed through a series of low pass filters to analyze the low frequencies.~\ref{polikar1996wavelet}
 
 
 %~\cite{polikarTHE WAVELET TUTORIALusing}
-  The DWT [Fig.~\ref{fig:dwt}] analyzes the signal at different frequency bands with different resolutions by decomposing the signal into a coarse approximation and detail information, which are associated with low pass and highpass filters, respectively. In our case, we use Haar discrete wavelet transform as the basic function to perform signal decomposition, so that an original image is decomposed into four coefficients: one low-pass filtering coefficients (approximation coefficients) and three high-pass filtering coefficients (detail coefficients, containing the horizontal(h), vertical(v), and diagonal(d) detail coefficients) at each level.
+The DWT [Fig.~\ref{fig:dwt}] analyzes the signal at different frequency bands with different resolutions by decomposing the signal into a coarse approximation and detail information, which are associated with low-pass and high-pass filters, respectively. In our case, we use Haar discrete wavelet transform as the basic function to perform signal decomposition so that an original image is decomposed into four coefficients: one low-pass filtering coefficients (approximation coefficients) and three high-pass filtering coefficients (detail coefficients, containing the horizontal(h), vertical(v), and diagonal(d) detail coefficients) at each level. The number of coefficients of approximation coefficients and detail coefficients is halved each time the level increase.
 
-%Here is one example demonstrated by Fig.~\ref{fig:dwt} that adapted from~\cite{hijazi2015using}. 
+
+%Here is one example demonstrated by Fig.~\ref{fig:dwt} that adapted from~\cite{hijazi2015using}.
 
 \begin{figure}[h]
 \centering
@@ -26,22 +32,25 @@ The control charts are used spatially by moving a mask (or window) across the im
 \label{fig:dwt}
 \end{figure}
 
-  The number of coefficients of approximation coefficients and detail coefficients are halved when the level increase,since the images we analysized is in form of 2-D, so we need to perform the 2-D haar wavelet tranform by applying 1-D wavelet transform first on rows and then on columns.There is a built-in function in MATLAB haart2, which perform 2-D haar wavelet tranform.
-the haart2 transform is obtained down to level
+
+Since the analyzed images are in the form of 2-D, we need to perform the 2-D haar wavelet transform by applying 1-D wavelet transform first on rows and then on columns. There is a built-in function in MATLAB haart2, which performs a 2-D haar wavelet transform.
+The haart2 transform is obtained down to level
+
 
 \begin{equation}
-\log_2(min(row's dimension,column's dimension)) \label{equa:log1}
+\centering \log_2(min(row's dimension,column's dimension)) \label{equa:log1}
 \end{equation}
 
- %\[\log_2(min(row's dimension,column's dimension))\] \label{equa:log1}
-If the row or column dimension of data is even, but not a power of two, the haart2 transform is obtained down to level 
+%\[\log_2(min(row's dimension,column's dimension))\] \label{equa:log1}
+If the row or column dimension of data is even, but not a power of two, the haart2 transform is obtained down to level
 
 \begin{equation}
-\lfloor \log_2(\frac{min(row's dimension,column's dimension)}{2}) \rfloor \label{equa:log2}
+\centering \lfloor \log_2(\frac{min(row's dimension,column's dimension)}{2}) \rfloor \label{equa:log2}
 \end{equation}
 %\[\lfloor \log_2(\frac{min(row's dimension,column's dimension)}{2}) \rfloor\] \label{equa:log2}
 
-In our case, we have sample data of size 100 * 100, the largest level of haart2 transform is then 5 by using Equation \ref{equa:log2}.By using wavelet decomposition
+%In our case, we have sample data of size 100 * 100. The largest level of haart2 transform is then five by using Equation \ref{equa:log2}.By using wavelet decomposition
+
 
 
 
@@ -49,28 +58,48 @@ In our case, we have sample data of size 100 * 100, the largest level of haart2 
 
 
 \section{Wavelet decomposition based Hotteling $T^{2}$ control chart}
-  In order to monitor the surface quality of the mobile phone, we need some feature quantities to characterize the quality of the image. The DWT are used to retrieved quality characteristics from image data, since It decomposes the image data into some details coefficients, which contain horizontal, vertical, and diagonal coefficients. These coefficients can be used as the input of the control chart after processing, and the control chart can then judge whether the procedure is under control by monitoring the value of the coefficient.
+In order to monitor the surface quality of the mobile phone's cover, feature statistics are needed to characterize the quality of the cover. The DWT is used to retrieved quality characteristics from image data since It decomposes the image data into some detailed coefficients, which contain horizontal, vertical, and diagonal coefficients. These processed coefficients can be fed into the control chart, in which the procedure can be judged whether it is under control by monitoring the value of the coefficients.
 
 
-  A RGB image has three frame: R,G and B frame, we apply haar wavelet transform on each frame at the same time, the coefficients of final level have actually final level times filtered by high pass filter, which mean the amplitude of coefficients contain the information of high frequency signal in original image, namely The higher the coefficients, the more likely the signal will be abrupt. The Abrupt in the signal then represent the defects in the products which we are monitoring.
-% maybe I should try get 9 elements to represent a image, that's more reasonable
+A RGB image has three frames: Red(R), Green(G), and Blue(B) frame. We apply haar wavelet transform on each frame simultaneously. The coefficients of the final level($L$) have L times filtered by the high pass filter, which means the amplitude of coefficients contains the information of the high-frequency signal in the original image. The higher the coefficients, the more likely the signal will be abrupt. The Abrupt in the signal then correspond to the defects in the monitored products.
+% maybe I should try to get 9 elements to represent an image, that is more reasonable
 
 
-	After we decompose an image of ($M \times N$) pixels, we get horizontal(h), vertical(v), and diagonal(d) coefficient matrix($S \times S$) for each frame at final level($L$),each coefficient matrix have $S^2$ coefficients,an image sample can have $3 \times S^2$ coefficients.~\ref{montgomery2020introduction} present tables indicating the recommended number of quality characteristics p = 2, 3, 4, 5, 10, and 20. It turns out that the cooeficients of dianonal coefficient matrix can best reflects the surface defects of various shapes(see experiment ~\ref{cp:experiment}),thus we first absolute all coefficients, which turn negative coefficients into positive coefficients withoud changing the value of itself. After that we take the maximal coefficient among the diagonal matrix and consider it as the disired statistical charateristic of coresponding frame. Finally 3 coefficients retrieved from an image is composing the mean characteristic vector in Multivariate Control Chart. 
+After we decompose an image of ($M \times N$) pixels, we get horizontal(h), vertical(v), and diagonal(d) coefficient matrix($S \times S$) for each frame at final level($L$), each coefficient matrix have $S^2$ coefficients,an image sample can have $3 \times S^2$ coefficients.~\ref{montgomery2020introduction} present tables indicating the recommended number of quality characteristics p = 2, 3, 4, 5, 10, and 20. It turns out that the coefficients of the diagonal coefficient matrix can best reflect the surface defects of various shapes(see experiment ~\ref{cp:experiment}). Thus we first absolute all coefficients, which turn negative coefficients into positive coefficients without changing the value itself. After that, we take the maximal coefficient among the diagonal matrix and consider it the desired statistical characteristic of the corresponding frame. Further, three coefficients retrieved from three frames compose the multiple wavelet characteristic vector $\mathbf{x}$. Finally, The Hotelling $T^{2}$ statistic
+
+\begin{equation}
+\centering T^{2}=(\mathbf{x}-\overline{\mathbf{x}})^{\prime} \mathbf{S}^{-1}(\mathbf{x}-\overline{\mathbf{x}}) \label{equa:T2}
+\end{equation}
+
+in which $\overline{\mathbf{x}}$ and $\mathbf{S}$ be the sample mean vector and
+covariance matrix, respectively, of these observations,
+integrates the multiple wavelet characteristics $\mathbf{x}$ into a statistic value $T^{2}$ for each sample image.
+If this statistic value is larger than Upper Control Limit(UCL)
+
+\begin{equation}
+\centering \mathrm{UCL}=\frac{p(m+1)(m-1)}{m^{2}-m p} F_{\alpha, p, m-p}
+\label{equa:UCL}
+\end{equation}
+
+in which m is the sample size, p is the number of quality characteristics, $\alpha$ is confident level,
+we are $(1 - \alpha)$ confident that this sample is out of control. Vice versa, we are $(1- \alpha)$ confident that this sample is in control.
 
 
-There are two distinct phases of the control chart~\cite{bersimis2007multivariate}.
+\begin{comment}
+Suppose that m samples, each size n = 1, are available and p is the number of
+quality characteristics observed in each sample. Let $\overline{\mathbf{x}}$ and $\mathbf{S}$ be the sample mean vector and
+covariance matrix, respectively, of these observations. The Hotelling T2 statistic is
 
-\begin{itemize}
-\item Phase I: charts are used for retrospectively testing whether the process was in control when the first
-subgroups were being drawn. In this phase, the charts are used as aids to the practitioner, in bringing a
-process into a state where it is statistically in control.
-\item Phase II: control charts are used for testing whether the process remains in control when future subgroups
-are drawn. In this phase, the charts are used as aids to the practitioner in monitoring the process for any
-change from an in-control state.
-\end{itemize}
 
-Multivariate Control Chart can be utilized to simultaneous monitor more than one quality characteristic. 
+After we decompose an image of ($M \times N$) pixels, we get horizontal(h), vertical(v), and diagonal(d) coefficient matrix($S \times S$) for each frame at final level($L$),each coefficient matrix have $S^2$ coefficients,an image sample can have $3 \times S^2$ coefficients.~\ref{montgomery2020introduction} present tables indicating the recommended number of quality characteristics p = 2, 3, 4, 5, 10, and 20. It turns out that the coefficients of the diagonal coefficient matrix can best reflect the surface defects of various shapes(see experiment ~\ref{cp:experiment}). Thus we first absolute all coefficients, which turn negative coefficients into positive coefficients without changing the value itself. After that, we take the maximal coefficient among the diagonal matrix and consider it the desired statistical characteristic of the corresponding frame. Finally, three coefficients retrieved from an image is composing the mean characteristic vector in Multivariate Control Chart.
+\end{comment}
+
+In phase I, the sample mean vector $\overline{\mathbf{x}}$ and covariance matrix $\mathbf{S}$ of standard images as well as UCL are calculated and fed into phase II as input. The images in phase II are first decomposed by haar wavelet transform into $3 \times 1$ characteristic vector $\mathbf{x}$. Then by using Equation~\ref{equa:T2} we can calculate the Hotelling T2 statistic of this sample and compare it with UCL to judge if the sample is in control.
+
+
+
+%Multivariate Control Chart can be utilized to simultaneous monitor more than one quality characteristic.
+
 
 
 
