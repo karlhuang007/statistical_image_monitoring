@@ -3,15 +3,15 @@
 \contentsline {chapter}{\numberline {2}Related Work}{11}{chapter.7}%
 \contentsline {chapter}{\numberline {3}Background}{12}{chapter.9}%
 \contentsline {section}{\numberline {3.1}Discrete wavelet decomposition}{12}{section.10}%
-\contentsline {section}{\numberline {3.2}Hotteling $T^{2}$ control chart}{12}{section.11}%
-\contentsline {chapter}{\numberline {4}Methodology}{13}{chapter.12}%
-\contentsline {section}{\numberline {4.1}Maximal variance of moving windows}{13}{section.13}%
-\contentsline {section}{\numberline {4.2}Discrete Wavelet transform decomposition}{13}{section.14}%
-\contentsline {section}{\numberline {4.3}Wavelet decomposition based Hotteling $T^{2}$ control chart}{15}{section.18}%
-\contentsline {chapter}{\numberline {5}Dataset}{17}{chapter.21}%
-\contentsline {chapter}{\numberline {6}Experiments}{18}{chapter.23}%
-\contentsline {chapter}{\numberline {7}Results and Discussion}{19}{chapter.25}%
-\contentsline {chapter}{\numberline {8}Summary and Outlook}{20}{chapter.26}%
-\contentsline {section}{\numberline {8.1}Summary}{20}{section.27}%
-\contentsline {section}{\numberline {8.2}Outlook}{20}{section.28}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
+\contentsline {section}{\numberline {3.2}Control chart}{12}{section.11}%
+\contentsline {subsection}{\numberline {3.2.1}Shewhart $\bar {X}$ and s control chart}{13}{subsection.20}%
+\contentsline {chapter}{\numberline {4}Methodology}{15}{chapter.23}%
+\contentsline {section}{\numberline {4.1}Maximum variance of sliding-windows}{15}{section.24}%
+\contentsline {section}{\numberline {4.2}Discrete Wavelet transform decomposition}{15}{section.25}%
+\contentsline {section}{\numberline {4.3}Wavelet decomposition based Hotteling $T^{2}$ control chart}{17}{section.29}%
+\contentsline {chapter}{\numberline {5}Dataset}{19}{chapter.32}%
+\contentsline {chapter}{\numberline {6}Experiments}{20}{chapter.34}%
+\contentsline {chapter}{\numberline {7}Results and Discussion}{21}{chapter.36}%
+\contentsline {chapter}{\numberline {8}Summary and Outlook}{22}{chapter.37}%
+\contentsline {section}{\numberline {8.1}Summary}{22}{section.38}%
+\contentsline {section}{\numberline {8.2}Outlook}{22}{section.39}%

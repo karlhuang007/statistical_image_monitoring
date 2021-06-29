@@ -6,10 +6,10 @@ Bersimis, S., Psarakis, S., and Panaretos, J. (2007).
 \newblock {\em Quality and Reliability engineering international},
   23(5):517--543.
 
-\bibitem[LeCun et~al., 2015]{lecun2015deep}
-LeCun, Y., Bengio, Y., and Hinton, G. (2015).
-\newblock Deep learning.
-\newblock {\em nature}, 521(7553):436.
+\bibitem[Heckert et~al., 2002]{heckert2002handbook}
+Heckert, N.~A., Filliben, J.~J., Croarkin, C.~M., Hembree, B., Guthrie, W.~F.,
+  Tobias, P., and Prinz, J. (2002).
+\newblock Handbook 151: Nist/sematech e-handbook of statistical methods.
 
 \bibitem[Megahed et~al., 2011]{megahed2011review}
 Megahed, F.~M., Woodall, W.~H., and Camelio, J.~A. (2011).
@@ -24,12 +24,5 @@ Montgomery, D.~C. (2020).
 \bibitem[Polikar et~al., 1996]{polikar1996wavelet}
 Polikar, R. et~al. (1996).
 \newblock The wavelet tutorial.
-
-\bibitem[Robicquet et~al., 2016]{robicquet2016learning}
-Robicquet, A., Sadeghian, A., Alahi, A., and Savarese, S. (2016).
-\newblock Learning social etiquette: Human trajectory understanding in crowded
-  scenes.
-\newblock In {\em European conference on computer vision}, pages 549--565.
-  Springer.
 
 \end{thebibliography}
