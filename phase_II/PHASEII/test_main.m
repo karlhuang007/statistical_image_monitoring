@@ -23,16 +23,16 @@ test_result = [];
 % xlabel("image number")
 % ylabel("T2 statistic")
 %% for bx.jpg
-for i=1:15
+for i=1:22
     
     [r,g,b]=haar2_wavelet(sprintf('b%d.jpg',i));
     X_bar = [r,g,b];
     T2 =  ([X_bar - X_double_bar] * inv(covariance) *[X_bar - X_double_bar].' );
     test_result = [test_result,T2];
 end
-x=[1:1:15];
-x1 = [1:1:15];
-x2 = 8.276*ones([1,15]);
+x=[1:1:22];
+x1 = [1:1:22];
+x2 = 8.276*ones([1,22]);
 plot(x,test_result,x1,x2);
 title("Phase II image statistic(orange line is UCL = 8.276)")
 xlabel("image number")
