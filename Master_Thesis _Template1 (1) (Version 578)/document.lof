@@ -1,0 +1,14 @@
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces high frequency signal is better resolved in time domain\relax }}{13}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces low frequency signal is better resolved in frequency domain\relax }}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces the DWT decomposition algorithms\relax }}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces A typical control chart.}}{22}{figure.caption.26}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Structure of CNNs}}{24}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Decomposition of RGB image into $1\times 3$ wavelet characteristic vector\relax }}{26}{figure.caption.57}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

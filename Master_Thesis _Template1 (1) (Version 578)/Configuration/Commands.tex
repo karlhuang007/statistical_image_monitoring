@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file is a part of the TexReportsTemplate %%
+%%           (c) by Tristan Wehrmaker            %%
+%%          last modified:  04/15/2008           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newcommand{\comment}[1]{
+% 	~\vspace{0.2cm}\\
+% 	\fbox{
+% 	\begin{minipage}[t]{13cm}
+% 	      \textcolor{red}{\textbf{#1}}
+% 	\end{minipage}
+% 	}
+% 	~\vspace{0.2cm}\\
+% }
+
+\newcommand{\items}[1]{
+	~\vspace{0.2cm}\\
+	\framebox[\textwidth]{
+		\begin{tabular}{m{1.2cm}m{14cm}}
+			\includegraphics[height=1cm]{Pics/gp.jpg} &
+			\begin{itemize}#1\end{itemize}
+		\end{tabular}
+	}
+	~\vspace{0.2cm}\\
+}
+
+\newcommand{\missing}{ \colorbox{red}{\textbf{...}} }
+
+\newcommand{\recheck}[1]{ \colorbox{green}{\textbf{#1}} }
+
+\newcommand{\multicomment}[1]{{}}
+
+\newcommand{\marker}[1]{\textcolor{red}{#1}}
+
+%\newcommand{\image}[2]{
+%	\begin{figure}[h]
+%		\begin{center}
+%			\includegraphics{Pics/#1}
+%			\caption{#2}
+%		\end{center}
+%	\end{figure}
+%}
+%\newcommand{\ok}{\includegraphics{Pics/check.png}}
+\newcommand{\ok}{\ding{52}}
+
+\newcommand{\image}[2]{
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics{Pics/#1}
+			\vspace{-0.2cm}
+			\caption{#2}
+		\end{center}
+	\end{figure}
+}
+
+\newcommand{\imagewithtext}[3]{
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics{Pics/#1}
+			\caption{#2}
+			~\\
+			#3
+		\end{center}
+	\end{figure}
+}
+
+\newcommand{\fullsizeimage}[2]{
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics[width=\textwidth]{Pics/#1}
+			\caption{#2}
+		\end{center}
+	\end{figure}
+}
+
+%\newcommand{\qed}{\begin{flushright}q.e.d.\end{flushright}}
+%\newcommand{\Rm}{\ensuremath{\mathds{R}}}
+%\newcommand{\Rn}{\ensuremath{\mathds{N}}}
+%\newcommand{\Rq}{\ensuremath{\mathds{Q}}}
+%\newcommand{\Rc}{\ensuremath{\mathds{C}}}
+%\newcommand{\Rz}{\ensuremath{\mathds{Z}}}
+%\newcommand{\Reins}{\ensuremath{\mathds{1}}}
+%\newcommand{\Pot}{\operatorname{Pot}}
+%\newcommand\pmat[1]{\begin{pmatrix} #1\end{pmatrix}}
+%\newcommand{\Kdots}{,\ldots,}
+%\newcommand{\Dotdots}{\cdot \ldots \cdot}
+%\newcommand{\Midots}{- \ldots -}
+%\newcommand{\Pludots}{+ \ldots +}
+%\newcommand{\Indi}{{1\hspace{-1.7mm}\bot}}
+%-----------------------------Suetterlin---------------------------------------
+%\newcommand{\SA}{\text{{\suet A} }}
+%\newcommand{\SP}{\text{{\suet P} }}
+%\newcommand{\SL}{\text{{\suet L} }}
+
+%-----------------------------Math-Operators----------------------------------
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\K}{Kern}
+\DeclareMathOperator{\rang}{rang}
+\DeclareMathOperator{\sh}{Sh}
+\DeclareMathOperator{\spgl}{S_L}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arcoth}{arcoth}
+\DeclareMathOperator{\Basis}{Basis}
+\DeclareMathOperator{\Bild}{Bild}
+
+\newcommand{\work}{
+\label{Workpoint}
+\fcolorbox{black}{lightred}{\textbf{W}}
+}
+
+\newtheoremstyle{mydef}	% name
+	{10pt}				% Space above 
+	{10pt}				% Space below 
+	{\itshape}			% Body font 
+	{}					% Indent amount 1
+	{\bfseries}			% Theorem head font 
+	{:}					% Punctuation after theorem head 
+	{.5em}				% Space after theorem head 2
+	{}					% Theorem head spec (can be left empty, meaning `normal')
+						%1 Indent amount: empty = no indent, \parindent = normal paragraph indent
+						%2 Space after theorem head: { } = normal interword space; \newline = linebreak
+
+\theoremstyle{mydef}
+\newtheorem{Def}{Definition}
+
+%Workaround für \lstlistoflistings
+\makeatletter
+\@ifundefined{float@listhead}{}{%
+    \renewcommand*{\lstlistoflistings}{%
+        \begingroup
+    	    \if@twocolumn
+                \@restonecoltrue\onecolumn
+            \else
+                \@restonecolfalse
+            \fi
+            \float@listhead{\lstlistlistingname}%
+            \setlength{\parskip}{\z@}%
+            \setlength{\parindent}{\z@}%
+            \setlength{\parfillskip}{\z@ \@plus 1fil}%
+            \@starttoc{lol}%
+            \if@restonecol\twocolumn\fi
+        \endgroup
+    }%
+}
+\makeatother
+
+\newenvironment{tabularcompactitem}{%
+  \setdefaultleftmargin{1em}{1em}{1em}{1em}{1em}{1em}%
+  \vspace{-\topsep}%
+  \compactitem
+}{
+  \vspace*{-\ht\strutbox}%
+  \endcompactitem
+}
+
+\let\oldtabular=\tabular
+\def\tabular{\small\oldtabular}
+
+%\let\oldlstlisting=\lstlisting
+%\def\lstlisting{\vspace{-0.5cm}\oldlstlisting}
+
+\definecolor{lightgray}{gray}{0.8}
+\definecolor{lightblue}{rgb}{0.51,0.68,0.91}

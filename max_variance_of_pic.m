@@ -25,3 +25,4 @@ max_variance_among_slideing_windows = max(defekt_variance);
 end
 
 
+

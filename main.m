@@ -32,9 +32,9 @@ end
  % 55 images
  x=[1:1:55];
  % transform the images' variance vector into normal distribution 
- y = gaussmf(x,[std(v) mean(v)]);
+%  y = gaussmf(x,[std(v) mean(v)]);
  % 
- y1 = 44 * y;
+%  y1 = 44 * y;
  
  subplot(2,2,1);
  histogram(v);
@@ -43,17 +43,37 @@ end
 ylabel('nums of image') ;
 
  
- subplot(2,2,2);
- plot(x,y1);
- title('transformed data');
- xlabel('max-variance') ;
-ylabel('nums of image') ;
+%  subplot(2,2,2);
+%  plot(x,y1);
+%  title('transformed data');
+%  xlabel('max-variance') ;
+% ylabel('nums of image') ;
  
  subplot(2,2,3);
  autocorr(v);
  title('autocorrelation plot of data');
- figure
+ 
 
 %calculate the mean
 mean_variance_of_good_slide  = mean(v);
 variance_of_good_slide = var(v);
+%%
+% v5_1 = max_size('b1.jpg',5);
+% v5_2 = max_size('b3.jpg',5);
+% v5_3 = max_size('b16.jpg',5);
+% 
+% v10_1 = max_size('b1.jpg',10);
+% v10_2 = max_size('b3.jpg',10);
+% v10_3 = max_size('b16.jpg',10);
+% 
+% v20_1 = max_size('b1.jpg',20);
+% v20_2 = max_size('b3.jpg',20);
+% v20_3 = max_size('b16.jpg',20);
+
+
+% \toprule
+% window size & image (a) & image (b) & image (c)
+% \midrule
+% $5*5$ & 1 & 2 & 3 \\   
+% $10*10$ & 1 & 2 & 3 \\   
+% $20*20$ & 1 & 2 & 3 \\ 
