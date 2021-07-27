@@ -1,0 +1,15 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.7}%
+\contentsline {chapter}{\numberline {2}Related Work}{11}{chapter.8}%
+\contentsline {chapter}{\numberline {3}Background}{12}{chapter.10}%
+\contentsline {section}{\numberline {3.1}Discrete wavelet decomposition}{12}{section.11}%
+\contentsline {section}{\numberline {3.2}Control chart}{16}{section.18}%
+\contentsline {subsection}{\numberline {3.2.1}Shewhart $\bar {X}$ control chart}{16}{subsection.27}%
+\contentsline {subsection}{\numberline {3.2.2}Hotelling $T^{2}$ control chart}{18}{subsection.38}%
+\contentsline {chapter}{\numberline {4}Methodology}{23}{chapter.50}%
+\contentsline {section}{\numberline {4.1}Maximum variance of sliding-windows}{23}{section.51}%
+\contentsline {section}{\numberline {4.2}Discrete Wavelet transform decomposition}{23}{section.52}%
+\contentsline {section}{\numberline {4.3}Wavelet decomposition based Hotteling $T^{2}$ control chart}{25}{section.56}%
+\contentsline {chapter}{\numberline {5}Dataset and Experiments}{27}{chapter.60}%
+\contentsline {chapter}{\numberline {6}Results and Discussion}{28}{chapter.61}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
