@@ -57,7 +57,7 @@ ylabel('nums of image') ;
 %calculate the mean
 mean_variance_of_good_slide  = mean(v);
 variance_of_good_slide = var(v);
-%%
+%% EXPERIMENT MAX SIZE OF SLIDING WINDOW
 % v5_1 = max_size('b1.jpg',5);
 % v5_2 = max_size('b3.jpg',5);
 % v5_3 = max_size('b16.jpg',5);
