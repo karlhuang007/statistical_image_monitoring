@@ -6,10 +6,13 @@
 % %   of image
 % %   b_dmax is the maximal value of diaganal detail coefficient in Blue frame
 % %   of image
-% 
+% % 
 % i = imread(image);
 % % apply haart2 wavelet transform of rgb image i
 % [a,h,v,d] = haart2(i,5);
+% 
+% % for change_color_main 
+% % [a,h,v,d] = haart2(image,5);
 % 
 % A1 = abs(d{5}(:,:,1));
 % r_dmax = max(A1,[],'all');
@@ -29,16 +32,16 @@ function [h_max,v_max,d_max] = haar2_wavelet(image)
 %   of image
 %   b_dmax is the maximal value of diaganal detail coefficient in Blue frame
 %   of image
-
+% 
 % for rgb_main
-i = imread(image);
-% apply haart2 wavelet transform of rgb image i
-[a,h,v,d] = haart2(i,5);
+% i = imread(image);
+% % apply haart2 wavelet transform of rgb image i
+% [a,h,v,d] = haart2(i,5);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 % for change_color_main 
-% [a,h,v,d] = haart2(image,5);
+ [a,h,v,d] = haart2(image,5);
 
 A1 = abs(h{5});
 h_max = max(A1,[],'all');

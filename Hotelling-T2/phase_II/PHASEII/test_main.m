@@ -24,7 +24,7 @@ test_result = [];
 % xlabel("image number")
 % ylabel("T2 statistic")
 %% for bx.jpg
-for i=1:22
+for i=1:23
     
     [r,g,b]=haar2_wavelet(sprintf('b%d.jpg',i));
     X_bar = [r,g,b];
@@ -33,7 +33,7 @@ for i=1:22
 end
 
 
-for i=1:98
+for i=1:97
     if i<10
         [r,g,b]=haar2_wavelet(sprintf('image_part_00%d.jpg',i));
         
@@ -53,7 +53,33 @@ x=[1:1:120];
 x1 = [1:1:120];
 x2 = 8.276*ones([1,120]);
 
-plot(x,test_result,x1,x2);
-title("Phase II image statistic(orange line is UCL = 8.276)")
+% calculate the average strength length
+aas = 0;
+count_ = 0;
+for u = 1:47
+    if test_result(u) > 8.276
+        aas = aas + test_result(u)/8.276;
+        count_ = count_ +1;
+    end
+end
+aas = aas/count_;
+% calculate the number of false alarm
+false_alarm = 0;
+for j = 1:120
+    if j<=47 && test_result(j)<8.276
+        false_alarm = false_alarm+1;
+    if j>47 && test_result(j)>8.276
+         false_alarm = false_alarm+1;
+    end
+    end
+end
+v_log = log2(test_result);
+x2_log = log2(x2);
+
+% plot(x,test_result,x1,x2);
+plot(x,v_log,x1,x2_log);
+
+% title("Phase II image Hotelling T2 statistic(orange line is UCL = 8.276)")
+title("Phase II image Hotelling T2 statistic(orange line is UCL)")
 xlabel("image number")
-ylabel("T2 statistic")
+ylabel("log2(T2 statistic)")

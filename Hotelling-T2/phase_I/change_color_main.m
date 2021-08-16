@@ -1,4 +1,4 @@
-X_bar_set = [];
+ X_bar_set = [];
 cov_set = [];
 
 % calculate every normal image's covariance matrix and mean vector    

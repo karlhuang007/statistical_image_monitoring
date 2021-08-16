@@ -15,8 +15,10 @@
 % [h5,v5,d5] = haar2_wavelet('e5.png');
 % [h6,v6,d6] = haar2_wavelet('e6.png');
 %%
-[h4,hh4,v4,vv4,d4,dd4] = haar2_wavelet_compare('e4.png');
+[h4,hh4,v4,vv4,d4,dd4] = haar2_wavelet_compare('b1.jpg');
 
-[h5,hh5,v5,vv5,d5,dd5] = haar2_wavelet_compare('e5.png');
-[h6,hh6,v6,vv6,d6,dd6] = haar2_wavelet_compare('e6.png');
+[h5,hh5,v5,vv5,d5,dd5] = haar2_wavelet_compare('b3.jpg');
+[h6,hh6,v6,vv6,d6,dd6] = haar2_wavelet_compare('e4.png');
+
+
 
