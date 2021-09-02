@@ -3,10 +3,10 @@ function [max_variance_among_slideing_windows] = max_variance_of_pic(image)
 % windows of the input image
 
 % for max_phase_II  
-%g1 = rgb2gray(imread(image));
+g1 = rgb2gray(imread(image));
 
 % for color_test_main
-g1 = image;
+% g1 = image;
 
 defekt_variance=[];
 

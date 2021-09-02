@@ -1,61 +1,60 @@
 %% for bx.jpg
-
+m = 85;
 v = [];
-for i=1:23
+UCL = 3.7359e-04;
+
+for i=1:40
     a = imread(sprintf('b%d.jpg',i));
     hsvImage = rgb2hsv(a);
     hsvImage(:,:,1) = rem(hsvImage(:,:,1) * 1.6, 1);
     rgbImage = hsv2rgb(hsvImage);
-    variance_single =max_variance_of_pic(rgbImage);
+    variance_single =max_variance_of_colorpic(rgbImage);
     v = [v,variance_single];
     
 end
-
-
-
-for i=1:97
-    if i<10
-        
-        a = imread(sprintf('image_part_00%d.jpg',i));
-        hsvImage = rgb2hsv(a);
-        hsvImage(:,:,1) = rem(hsvImage(:,:,1) * 1.6, 1);
-        rgbImage = hsv2rgb(hsvImage);
-        variance_single =max_variance_of_pic(rgbImage);
-        v = [v,variance_single];
-        
-        
-    else
-        a = imread(sprintf('image_part_0%d.jpg',i));
-        hsvImage = rgb2hsv(a);
-        hsvImage(:,:,1) = rem(hsvImage(:,:,1) * 1.6, 1);
-        rgbImage = hsv2rgb(hsvImage);
-        variance_single =max_variance_of_pic(rgbImage);
-        v = [v,variance_single];
-    end
+for i=1:34
+    a = imread(sprintf('g%d.png',i));
+    hsvImage = rgb2hsv(a);
+    hsvImage(:,:,1) = rem(hsvImage(:,:,1) * 1.6, 1);
+    rgbImage = hsv2rgb(hsvImage);
+    variance_single =max_variance_of_colorpic(rgbImage);
+    v = [v,variance_single];
+    
+end
+for i=25:35
+    a = imread(sprintf('image_part_0%d.jpg',i));
+    hsvImage = rgb2hsv(a);
+    hsvImage(:,:,1) = rem(hsvImage(:,:,1) * 1.6, 1);
+    rgbImage = hsv2rgb(hsvImage);
+    variance_single =max_variance_of_colorpic(rgbImage);
+    v = [v,variance_single];
+    
 
 end
-% haar2_wavelet using 3d has 22 false alarm
-% haar2_wavelet using hdv has 13 false alarm
+
+
 false_alarm = 0;
-for j = 1:120
-    if j<=47 && v(j)<0.0016
+
+for j = 1:m
+    if j<=40 && v(j)<UCL
         false_alarm = false_alarm+1;
-    if j>47 && v(j)>0.0016
+    else if j>40 && v(j)>UCL
          false_alarm = false_alarm+1;
     end
     end
 end
-x=[1:1:120];
-x1 = [1:1:120];
-y2 = 0.0016*ones([1,120]);
-y3 = 49.22*ones([1,120]);
+
+x=[1:1:m];
+x1 = [1:1:m];
+y2 = UCL*ones([1,m]);
+y3 = 49.22*ones([1,m]);
 
 v_log = log2(v);
 y2_log = log2(y2);
 
 plot(x,v_log,x1,y2_log);
-
+text(70,log2(UCL),'UCL')
 %plot(x,v,x1,y2);
-title("Phase II color changed image maximum variance statistic(orange line is UCL)")
+title("Phase II color changed image maximum variance statistic")
 xlabel("image number")
 ylabel("log2(maximum variance statistic)")
