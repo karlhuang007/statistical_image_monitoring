@@ -1,0 +1,19 @@
+\chapter{Summary and Outlook}
+\label{cp:summary_outlook}
+
+\section{Summary} \label{sec:summary}
+
+\begin{comment}
+
+Here you need to wrap up the thesis in very concise and short paragraph(s). This is normally a very frequent part that your readers take a first look. 
+
+You can also change this sub-chapter to conclusion if you can draw a conclusion based on the results you have found. However, please pay attention to the difference between conclusion and summary.
+\end{comment}
+
+
+This study proposed a framework for applying SPC in the context of image data using feature extract techniques in the frequency domain to monitor mobile phone cover's surface quality. In this framework, two methods with different feature extract techniques and control charts are proposed and compared, namely wavelet transformation with Hotelling $T^{2}$ control chart, and maximum variance among sliding window in combination with Shewhart $\bar{X}$ control chart. After feature extraction with wavelet transformation and maximum variance, the detail coefficients are monitored over time using a Hotelling $T^{2}$ control chart and Shewhart $\bar{X}$ control chart, respectively. Average run length, $ASS$, and $FDR$, are considered in empirical studies to evaluate the performance of the proposed methods in detecting faults. The result turns out that the method with wavelet transformation with Hotelling $T^{2}$ control chart achieves better performance in detecting defects and is more robust under different testing conditions. A comparison experiment is conducted in samples with different colours with the same methods mentioned above. The result illustrates that method II have almost the same performance (in term of Average run length and $FDR$) as that in original image data, proving method II is more suitable in different test situations. 
+
+\section{Outlook} \label{sec:outlook}
+
+There are three limitations in method II of this study. First, the number of decomposed characteristics is too few in our case since we only use the maximum value among the $H$, $V$, and $D$ matrices as desire statistics, which did not take advantage of the information in $RGB$ frame. Whether more statistics retrieved from image data can achieve better performance needs further study. Although our proposed methods perform well in detecting defects, the detection results do not include the specific location of the defects, which is not conducive to the troubleshooting of the post-production process and the improvement of the process flow. Thus the determination of faults location is also an exciting yet valuable research direction. The final limitation is the efficient problem by mix colour samples sets. The feasibility of using the Phase I in-control parameters of a batch of samples as the Phase II input of another batch of samples deserves further study.
+

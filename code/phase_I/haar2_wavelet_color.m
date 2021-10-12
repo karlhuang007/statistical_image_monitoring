@@ -1,17 +1,16 @@
 function [h_max,v_max,d_max] = haar2_wavelet_color(image)
-%HAAR2_WAVELET 此处显示有关此函数的摘要
-%   r_dmax is the maximal value of diaganal detail coefficient in Red frame
+%HAAR2_WAVELET this function correspond to The process describe at Figure 4.2 
+
+% image is the sample with different color by changing the hue value
+
+%   h_max is the maximal value of Horizontal detail coefficient in Red frame
 %   of image
-%   g_dmax is the maximal value of diaganal detail coefficient in Green frame
+%   v_max is the maximal value of Verticle detail coefficient in Green frame
 %   of image
-%   b_dmax is the maximal value of diaganal detail coefficient in Blue frame
+%   d_max is the maximal value of Diaganal detail coefficient in Blue frame
 %   of image
 
-% for rgb_main
-% i = imread(image);
-% % apply haart2 wavelet transform of rgb image i
-% [a,h,v,d] = haart2(i,5);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 % for change_color_main 

@@ -1,0 +1,97 @@
+\chapter{Related Work}
+\label{cp:RelatedWork}
+
+\begin{comment}
+Here you need to write your related work and cite properly. For example, one of the most influential researchers in ~\ac{DL} is Yann LeCun with the Nature Article \textit{Deep learning} \cite{lecun2015deep}. In total, you should refer to preferably approximately 50 papers (not less than 40 papers).
+
+Here, it is highly recommended to start writing this part as soon as you start reading any papers. It will take you a lot of time to do so and can also help you track the papers that you have been reading.
+\end{comment}
+
+Before the first paper~\cite{horst1992vision}, which presents the idea of a combination of SPC and MVS, both methods achieve good performance in their respective fields. Thus, a combination of control charts and image data was proposed at the industrial scene to take advantage of fast-growing machine vision techniques and effective yet easily implemented control charts to improve industrial quality the efficiency and accuracy of industrial quality inspection. Horst and Negin (1992) were also \nocite{horst1992vision}probably the first to discuss the advantage of the combination of control chart and image data, which lead to significant productivity improvements in web process applications, e.g., with paper, textiles, and plastic films.
+
+%feature extraction
+At the first beginning, this field's research focuses on univariate control chart with a single characteristic retrieved from image data. Armingol et al. (2003) \nocite{armingol2003statistical} proposed to use individual-moving range (I-MR) control chart for every pixel to detect any abnormal illumination change (pixel value change) in image. Unfortunately the massive number of control charts require an excessive amount of computational time that may not allow for online monitoring in real-time.
+
+Nembhard et al. (2003)\nocite{nembhard2003integrated} utilized Shewhart control chart to plot the error between the actual image intensity values and the forecasted intensity values in order to monitor colour transitions in plastic extrusion processes.
+
+Liang and Chiou (2008)\nocite{liang2008vision} use image processing techniques to extract the profile of the coated drill image and then use the $\bar{X}$ control chart to monitor the tool wear of coated drills.
+
+With the development of image processing technology, more and more features of different dimensions can be extracted from the picture. At this time, the univariate control chart is no longer suitable to monitor multiple features simultaneously. The research direction has become the image Feature extraction combined with multivariate control chart. 
+
+
+Xie (2008)\nocite{xie2008review} discuss the texture feature extraction and analysis in four categories, namely statistical approaches:
+\begin{itemize}
+    \item Histogram properties
+    \item Co-occurrence matrix 
+    \item Local binary pattern 
+    \item Cause-and-effect diagram
+    \item Other graylevel statistics
+    \item Autocorrelation 
+    \item Registration-based,
+\end{itemize}
+structural approaches:
+\begin{itemize}
+    \item Primitive measurement
+    \item Edge Features 
+    \item Skeleton representation
+    \item Morphological operations,
+\end{itemize}
+filter based methods:
+\begin{itemize}
+    \item Spatial domain filtering 
+    \item Frequency domain analysis
+    \item Joint spatial/spatial-frequency,
+\end{itemize}
+and model based approaches:
+\begin{itemize}
+    \item Fractal models 
+    \item Random field model
+    \item Texem model.
+\end{itemize}
+
+Wang and Tsung (2005) \nocite{wang2005using} using a Q-Q plot to detect changes in grayscale images. In a case study this method is used to detect defects in mobilephone liquid crystal display (LCD) panels. 
+
+Liu and MacGregor (2006) \nocite{liu2006estimation} develop MSV by using principal component analysis (PCA) to quantitatively
+estimate the appearance and aesthetics of manufactured
+products with engineered stone countertops, and monitoring the
+product appearance based on the most significant
+principal components with Hotelling T2 and SPE control charts to detect off-specification countertops.
+
+Lin (2007) ~\nocite{lin2007automated} used wavelets and multivariate statistical approaches, including the Hotelling $T2$ control charts, to detect ripple and other types of defects in electronic components, particularly surface barrier layer (SBL) chips of ceramic capacitors. In a
+later paper, Lin et al. (2008)\nocite{lin2008principal} conducted a comparison study between the performance of a wavelet-Hotelling T2
+control chart approach and a wavelet-PCA-based approach
+by detecting surface defects in light-emitting diode (LED) chips. Their results showed that the wavelet-PCA based approach achieves better performance in LED application.
+
+Lyu and Chen (2009) \nocite{lyu2009automated} monitor the inner and outer diameters of concentric circles using dimensionality reduction technique (image processing) and combined Hotelling $T2$ control charts to detect variations in the sample mean vector. They use 20 samples as phase I data and then applied their phase II method on the remaining 15 samples.
+
+Koosha and Noorossana (2017)\nocite{koosha2017statistical} proposed a method by firstly apply wavelet transformation to extract the main features of the image and then apply a generalized likelihood ratio (GLR) control chart to confront the deteriorating property of traditional control charts when the number of quality characteristics increases.
+
+
+Guo and He (2019) \nocite{guo2019real}propose a new monitoring method for image data using real-time contrasts (RTC), which converts a monitoring problem to a classification problem based on a supervised learning method, after that a control chart is constructed based on the classification accuracy and used to monitor a process. By using the method, the fault location and the time when changes occurred can be identified simultaneously.
+
+%Jiang and Wang (2005) \nocite{jiang2005liquid} develop 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% univariate/ multivariate control chart.
+
+
+
+
+
+
+
+ 

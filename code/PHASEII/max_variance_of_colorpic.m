@@ -2,6 +2,7 @@ function [max_variance_among_slideing_windows] = max_variance_of_colorpic(image)
 %UNTITLED This function return the maximal variance among all 10*10 moving
 % windows of the input image
 
+% image is the sample with different color by changing the hue value
 
 g1 = image;
 defekt_variance=[];

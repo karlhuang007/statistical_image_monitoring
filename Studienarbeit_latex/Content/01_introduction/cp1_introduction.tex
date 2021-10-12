@@ -1,0 +1,45 @@
+\chapter{Introduction}
+\label{cp:Introduction}
+\begin{comment}
+Here is the introduction. You need to write the following key points for your work. Keep each part concise and short. In total, this chapter should not be more than four pages.
+
+
+
+\begin{itemize}
+    \item Background
+    \item Motivation
+    \item Research gap
+    \item Objectives
+    \item Approach (in introduction chapter you do not necessarily need to write the results for your work)
+    \item The structure of your thesis
+\end{itemize}
+\end{comment}
+
+
+In recent decades, statistical process control (SPC) charts
+are widely used in manufacturing processes to detect assignable causes of variability and keep the process in control. In manufacturing processes, quality characteristics like geometry can be measured by hand and controlled by traditional control charts. However, some sensory quality characteristics like surface appearance are often monitored by machine vision. Machine vision inspection is recently been widely used in manufacturing processes and the wide application of image processing and sensor technology. Also, it can provide much relevant information in the process of production, such as surface defectives. Thus, machine vision system (MVS) is suitable for inspecting the products whose quality characteristics can be retrieved from images. In this study, the control charts are proposed to combine with machine vision system to monitor the surface quality of mobile phone cover. 
+
+Quality inspection is an integral part of ensuring product quality in the manufacturing process of mobile phone accessories. Some traditional manufacturers still perform human inspections on products after production and processing. Despite some similarities between human and machine vision, there are significant differences between them. As Zuech (2000)~\nocite{zuech2000understanding} stated, current machine-vision systems are primitive compared with the human eye-brain capability because current MVSs are susceptible to variations in lighting conditions, reflection, and minor changes in texture, among other variations, to which the human eye can easily adjust and compensate. In some cases, the use of MVSs is cheaper than the use of human inspectors, and it is expected that the cost of MVSs will continue to decrease over time~\cite{megahed2011review}. Thus, it is necessary to develop machine vision-based verification techniques to improve the efficiency of faults detection during product quality verification processes. 
+
+
+This study proposes a framework that combines SPC and MVS to achieve high efficiency and high accuracy defects detection on mobile phone cover. The main procedures of this study are organized as follow: Firstly image samples of mobile phone cover are collected. Then relevant literature are searched. After that the methods to address specific problem are proposed. Then an experiment is conducted to evaluate the performance of the proposed methods, and the conclusion is drawn. Finally, the summary and the outlook of this study are given.
+
+\begin{comment}
+\begin{itemize}
+    \item samples collect
+    \item relative paper review
+    \item methods propose
+    \item experiments conduct and compare
+    \item result analyze and improve
+\end{itemize}
+\end{comment}
+
+
+
+The proposed framework combines feature extract methods and statistical process control monitoring techniques to gradually infer a high-level statistic value in the cover of mobile phone image from the low-level representation of the scratches and stains and monitor the image base on statistic value. Firstly, the mobile phone cover surface texture properties such as scratch and stain are decomposed into so-called statistical characteristics by mean of sliding-window method introduced at Section~\ref{sec:maxvar} and the wavelet transform introduced at Section~\ref{sec:dwt}. Then statistical approach, i.e., Shewhart control chart and Hotelling $T^{2}$ control chart, are utilized respectively to monitor mean statistic value and the mean statistic vector of a univariate and multivariate process, which can be used to judge the existence of scratch defects in the sample image. The performance comparison of two combinations will be illustrated in Chapter~\ref{cp:dataset and experiment}.
+
+
+The remainder of this paper is organized as follows. The
+related work of this paper will be
+introduced in Chapter 2. Chapter 3 introduce the background knowledge of image, wavelet decomposition and control chart.
+Chapter 4 explain the principle and algorithms of the proposed method in detail. Chapter 5 provides an experiment to apply the proposed methods in an industrial environment to evaluate the proposed methods' performance. Finally, the conclusions and directions of future research are presented.
